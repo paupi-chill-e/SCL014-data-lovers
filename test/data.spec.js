@@ -1,13 +1,12 @@
-import { example, anotherExample } from '../src/data.js';
+import { filterTag, filterSearch, orderInfo } from '../src/data.js';
 
-
-describe('example', () => {
+describe('filterTag', () => {
   it('is a function', () => {
-    expect(typeof example).toBe('function');
+    expect(typeof filterTag).toBe('function');
   });
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
+  it('returns `filterTag`', () => {
+    expect(filterTag()).toBe('array');
   });
 });
 
@@ -21,3 +20,4 @@ describe('anotherExample', () => {
     expect(anotherExample()).toBe('OMG');
   });
 });
+
