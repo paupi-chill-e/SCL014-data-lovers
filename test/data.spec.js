@@ -5,19 +5,28 @@ describe('filterTag', () => {
     expect(typeof filterTag).toBe('function');
   });
 
-  it('returns `filterTag`', () => {
-    expect(filterTag()).toBe('array');
-  });
+  // it('returns `array`', () => {
+  //   expect(filterTag()).toBe('array');
+  // });
 });
 
-
-describe('anotherExample', () => {
+describe('filterSearch', () => {
   it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
+    expect(typeof filterSearch).toBe('function');
   });
 
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
+  // it('returns `array`', () => {
+  //   expect(filterSearch()).toBe('array');
+  // });
+});
+
+describe('orderInfo', () => {
+  it('is a function', () => {
+    expect(typeof orderInfo).toBe('function');
   });
+
+  // it('returns `array`', () => {
+  //   expect(filterTag()).toBe('array');
+  // });
 });
 
