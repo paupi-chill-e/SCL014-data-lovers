@@ -25,7 +25,7 @@
 
 
 A continuación se mostrará la imagen final del producto, el cual tiene sus responsives tanto para tablet, small tablet y smartphones.
-![pa]()
+![final1]( ) ![final2]( )
 
 
 ## 3. INVESTIGACIÓN UX.
@@ -82,9 +82,9 @@ Este fue creado en hoja y papel y fue pensado tanto en el buscador web como en c
 
 Se hicieron prototipos de baja calidad con la app web “invision” los cuales fueron testeados tanto en formato web y smartphone.
 
-![invision1web](uhttps://raw.githubusercontent.com/paupi-chill-e/SCL014-data-lovers/master/src/img/FotosReadMe/invision1web.png) ![invision2web](https://raw.githubusercontent.com/paupi-chill-e/SCL014-data-lovers/master/src/img/FotosReadMe/invision2web.png)
+![invision1web](https://raw.githubusercontent.com/paupi-chill-e/SCL014-data-lovers/master/src/img/FotosReadMe/invision1web.png) ![invision2web](https://raw.githubusercontent.com/paupi-chill-e/SCL014-data-lovers/master/src/img/FotosReadMe/invision2web.png)
 
-![invision1celu](uhttps://raw.githubusercontent.com/paupi-chill-e/SCL014-data-lovers/master/src/img/FotosReadMe/invision1celu.png) ![invision2celu](https://raw.githubusercontent.com/paupi-chill-e/SCL014-data-lovers/master/src/img/FotosReadMe/invision2celu.png) ![invision3celu](https://raw.githubusercontent.com/paupi-chill-e/SCL014-data-lovers/master/src/img/FotosReadMe/invision3celu.png)
+![invision1celu](https://raw.githubusercontent.com/paupi-chill-e/SCL014-data-lovers/master/src/img/FotosReadMe/invision1celu.png) ![invision2celu](https://raw.githubusercontent.com/paupi-chill-e/SCL014-data-lovers/master/src/img/FotosReadMe/invision2celu.png) ![invision3celu](https://raw.githubusercontent.com/paupi-chill-e/SCL014-data-lovers/master/src/img/FotosReadMe/invision3celu.png)
 
 ### 4.3. Prototipo de alta fidelidad
 
