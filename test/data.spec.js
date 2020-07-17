@@ -1,23 +1,15 @@
 import { filterTag, filterSearch, orderInfo } from '../src/data.js';
+import lol from '../src/data/lol/lol.js';
+
+const champions = Object.values(lol.data);
 
 describe('filterTag', () => {
   it('is a function', () => {
     expect(typeof filterTag).toBe('function');
   });
-
-  // it('returns `array`', () => {
-  //   expect(filterTag()).toBe('array');
-  // });
-});
-
-describe('filterSearch', () => {
-  it('is a function', () => {
-    expect(typeof filterSearch).toBe('function');
+  it('returns numbers of Tank champions', () => {
+    expect(filterTag(champions,'Tank')).toHaveLength(40);
   });
-
-  // it('returns `array`', () => {
-  //   expect(filterSearch()).toBe('array');
-  // });
 });
 
 describe('orderInfo', () => {
@@ -25,8 +17,16 @@ describe('orderInfo', () => {
     expect(typeof orderInfo).toBe('function');
   });
 
-  // it('returns `array`', () => {
-  //   expect(filterTag()).toBe('array');
-  // });
+  it('return the highest attack according to the order of the champions ', () => {
+    expect(orderInfo(champions,'attack')[0].info['attack']).toBe(10);
+  });
 });
 
+describe('filterSearch', () => {
+  it('is a function', () => {
+    expect(typeof filterSearch).toBe('function');
+  });
+  it('returns `array`', () => {
+    expect(filterSearch(champions,'NAMI')[0].name).toBe('Nami');
+  });
+});
