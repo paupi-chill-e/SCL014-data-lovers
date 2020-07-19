@@ -8,7 +8,7 @@ describe('filterTag', () => {
     expect(typeof filterTag).toBe('function');
   });
   it('returns numbers of Tank champions', () => {
-    expect(filterTag(champions,'Tank')).toHaveLength(40);
+    expect(filterTag(champions, 'Tank')).toHaveLength(40);
   });
 });
 
@@ -18,7 +18,7 @@ describe('orderInfo', () => {
   });
 
   it('return the highest attack according to the order of the champions ', () => {
-    expect(orderInfo(champions,'attack')[0].info['attack']).toBe(10);
+    expect(orderInfo(champions, 'attack')[0].info['attack']).toBe(10);
   });
 });
 
@@ -27,6 +27,6 @@ describe('filterSearch', () => {
     expect(typeof filterSearch).toBe('function');
   });
   it('returns `array`', () => {
-    expect(filterSearch(champions,'NAMI')[0].name).toBe('Nami');
+    expect(filterSearch(champions, 'NAMI')[0].name).toBe('Nami');
   });
 });

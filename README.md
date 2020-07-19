@@ -19,13 +19,14 @@
 ## 1. RESUMEN DEL PROYECTO
 
 
-**League Pickup** es una aplicación pensada para que usuarios novatos escojan a su campeón para jugar en el juego League of Legends. Al entrar a la app se muestran todos los campeones del juego con sus características principales y el usuario puede interactuar con la página filtrando según sus intereses.
+**League Pickup** es una aplicación orientada para que usuarios novatos conozcan y aprendan sobre cada personaje o campeón del juego League of Legends. Al entrar a la app se muestran y describen todos los campeones que pueden ser elegibles dentro del juego, con sus características principales y estadísticas de cada uno para que el usuario puede interactuar con la página filtrando según sus intereses.
 
 ## 2. IMÁGEN FINAL DEL PRODUCTO
 
 
 A continuación se mostrará la imagen final del producto, el cual tiene sus responsives tanto para tablet, small tablet y smartphones.
 ![final1](https://raw.githubusercontent.com/paupi-chill-e/SCL014-data-lovers/master/src/img/FotosReadMe/final1.png) ![final2](https://raw.githubusercontent.com/paupi-chill-e/SCL014-data-lovers/master/src/img/FotosReadMe/final2.png)
+![](mobileGIF.gif)
 
 
 ## 3. INVESTIGACIÓN UX.
@@ -35,15 +36,15 @@ A continuación se mostrará la imagen final del producto, el cual tiene sus res
 
 Los usuarios de League Pickup, son jugadores nuevos o principiantes del juego League of Leguends que buscan elegir campeones para jugar, ya sea que llevan poco tiempo jugando o juegan esporádicamente y no están al tanto de todos los personajes.
 
-El público objetivo de League Pickup, son personas que tengan afición a los juegos en línea y cuenten con acceso a un computador e internet. Pueden ser usuarios recientes en el mundo de los juegos en línea o usuarios más experimentados en otros juegos pero que sean sus primeras experiencias en jugar League of Legends.
+El público objetivo de League Pickup, son personas que tengan afición a los juegos en línea y cuenten con acceso a un computador e internet. Pueden ser usuarios recientes en el mundo de los videojuegos en línea, usuarios más experimentados en otro tipo juegos similares o  jugadores que empiecen a conocer el mundo de League of Legends.
 
 ### 3.2. Cómo el producto soluciona los problemas
 
-En el juego League of Legends existen muchos campeones, y cada uno de ellos tiene mucha información y estadísticas. Para un usuario que es reciente en el uso del juego, puede ser abrumador y engorroso saber que personajes puede elegir para jugar. Por lo que League Pickup, a través de una interfaz simple y amigable, muestra una lista de todos los campeones disponibles con un resumen de la data más relevante para el jugador, que puede ser filtrada según el interés del jugador. Luego de filtrar, al hacer click en el campeón se muestra una data más detallada que permita tomar la decisión si elegir o no el personaje. 
+En League of Legends existen muchos campeones, y cada uno de ellos tiene mucha información y estadísticas. Para un usuario que es reciente en el uso del juego, puede ser abrumador y engorroso saber que personajes puede elegir para jugar. Por lo que League Pickup, a través de una interfaz simple y amigable, muestra una lista de todos los campeones disponibles con un resumen de la data más relevante, que puede ser filtrada según el interés del jugador.  Al hacer click en el campeón se muestra una data más detallada que permita tomar la decisión si elegir o no el personaje y así mismo conocer los diferentes tipos de funciones o roles que cumplen.
 
 ### 3.3. Historias de usuarios
 
-Para identificar las historias de usuario correspondiente al proyecto, se realizó una encuesta al público objetivo para determinar necesidades que tenian respecto a la aplicación. Una vez que se tenia identificado el contenido de la data, se hicieron las siguientes preguntas y sus respectivas alternativas
+Para identificar las historias de usuario correspondiente al proyecto, se realizó una encuesta al público objetivo para determinar necesidades que tenian respecto a la aplicación. Una vez que se tenia identificado el contenido de la data, se hicieron las siguientes preguntas con sus respectivas alternativas
 * ¿Qué le gustaría ver en la página de inicio?
 * ¿Qué contenido le gustaria que tuvieran las cartas de cada campeón?
 * ¿Que filtros debería debería tener?
@@ -51,10 +52,10 @@ Para identificar las historias de usuario correspondiente al proyecto, se realiz
 * Comentarios adicionales
 
 Con los resultados de la encuesta, pudimos crear 4 historias de usuario que fueron la base del proyecto:
-1- Visualizar todos los campeones que existan para ver todas las posibilidades.
-2- Visualizar la información detallada de las estadisticas, para decidir el campeón.
-3- Filtrar por tag, para elegir según jugabilidad.
-4- Ordenar por puntos de ataque, para elegir según la funcionalidad.
+* 1- Visualizar todos los campeones que existan para ver todas las posibilidades.
+* 2- Visualizar la información detallada de las estadisticas para decidir el campeón.
+* 3- Filtrar por tag, para elegir según jugabilidad.
+* 4- Ordenar por puntos de ataque, para elegir según la funcionalidad.
 
 ### 3.4. Resumen feedback
 
@@ -65,12 +66,12 @@ Los feedbacks que recibimos de nuestros pares fueron todas de aceptación al pro
 * Reset filter: agregar un botón que limpiara los filtros.
 * Agregar iconos: para hacer el contenido más visual y dinámico.
 * Organizar contenido modal: la estadística de la data era muy extensa por lo que resultaba tedioso al mostrar, decidimos elegir lo más relevante y mostrarlo de una manera más amigable visualmente.
-* Aside: al principio este abarcaba mucho espacio en la zona lateral de la página, por lo cúal llegaba a ser molesto y distractivo(? distrayente, por lo que se redujo su ancho.)
+* Barra lateral de filtros: al principio este abarcaba mucho espacio en la zona lateral de la página, le quitaba protagonismo al contenido principal y resultaba ser un elemento distractor, por lo que se redujo su ancho.
 
 ## 4. DISEÑO INTERFAZ DE USUARIO
 
 
-Desde el comienzo de la página se tuvo la idea de que tuviera una interfaz simple, amigable y que tuviera la paleta de colores del juego original, para así intentar simular un ambiente familiar al juego y por ende más amigable para el jugador. Entonces, se utilizaron colores, animaciones, tipografías que pertenecen al juego League Of Legends.
+Desde el comienzo de la página se tuvo la idea de que tuviera una interfaz simple, amigable y que tuviera la paleta de colores del juego original, para así intentar simular un ambiente familiar al juego y por ende más accesible para el usuario. Se utilizaron colores, animaciones y tipografías que pertenecen a League Of Legends.
 
 ### 4.1. Primer Sketch
 
