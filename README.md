@@ -26,7 +26,7 @@
 
 A continuación se mostrará la imagen final del producto, el cual tiene sus responsives tanto para tablet, small tablet y smartphones.
 ![final1](https://raw.githubusercontent.com/paupi-chill-e/SCL014-data-lovers/master/src/img/FotosReadMe/final1.png) ![final2](https://raw.githubusercontent.com/paupi-chill-e/SCL014-data-lovers/master/src/img/FotosReadMe/final2.png)
-![](mobileGIF.gif)
+![mobileGIF](https://raw.githubusercontent.com/mcmacarena/SCL014-data-lovers/master/src/img/FotosReadMe/mobileGIF.gif)
 
 
 ## 3. INVESTIGACIÓN UX.
