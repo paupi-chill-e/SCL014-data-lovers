@@ -6,20 +6,14 @@
     /* sacar el padding y margin por defecto de los navegadores */
     margin:0;
     padding: 0;
-    /* #193747,#0B1B25, rgb(004,012,023));  */
-    /* celeste rgba(8, 162, 162, 0.788) */
 }
 html{
     font-family:themillion;
 }
 .background{
-    background-image:url(http://ava7.com/w/games/league-of-legends/league-of-legends-game-lol-shadow-isles-landscape-city.jpg);
+    background-image: url('./img/league-of-legends-game-lol-shadow-isles-landscape-city.jpg');
     background-position: center;
     background-attachment: fixed;
-}
-
-#containerAsideMain{
-    margin-top: 110px;
 }
 /* HEADER */
 header {
@@ -32,14 +26,11 @@ header {
     justify-content: center;
     align-items: center;
 }
-.pag_name{
-    color: rgb(198,146,060);
-    font-size: 25px;
-}
 img[src="img/logo_lol.png"]{
     cursor: pointer;
-    height: 100px;
-    width: 100px;
+    height: auto;
+    width: 350px;
+    margin-left: 150px;
 }
 /* BODY */
 aside{
@@ -59,6 +50,26 @@ aside{
 label[for=" "]{
     margin-bottom: 10px;
     color: rgb(198,146,060);
+    font-size: 20px;
+}
+label[for="tag"]{
+    font-size: 16px;
+}
+select,option, .btnClear{
+    font-size: 15px ;
+    font-family:themillion;
+    background-color: rgb(17, 17, 17, 0.85);
+    color: white;
+    border: 1.5px solid rgb(198,146,060);
+    padding: 5px;
+    width:140px;
+    cursor:pointer;
+}
+#containerAsideMain{
+    margin-top: 110px;
+}
+.toggle{
+    visibility: hidden;
 }
 .searcher{
     display: flex;
@@ -74,12 +85,19 @@ input[type="search"]{
     padding: 9px 10px 9px 135px;
     font-size: 15px;
     outline: none;
-    border: 1px solid rgb(198,146,060);
+    border: 1.5px solid rgb(198,146,060);
     background: rgb(17, 17, 17) url("img/search-icon.png") no-repeat 10px center;
     width: 384px;
     height: 40px;
     color: white;
 } 
+/* efectos */
+input[type="search"]:hover, select:hover, .btnClear:hover{
+    border: 1.5px solid rgb(236, 193, 124);
+    -webkit-box-shadow: inset 0px -50px 102px -38px rgba(198,146,60,0.1);
+    -moz-box-shadow: inset 0px -50px 102px -38px rgba(198,146,60,0.1);
+    box-shadow: inset 0px -50px 102px -38px rgba(198,146,60,0.1);
+}
 /* CHAMPIONS */
 #allTheChamps{
     display: flex;
@@ -105,32 +123,34 @@ input[type="search"]{
     justify-content: center;
     align-items: center;
     border-radius: 5px;
-    box-shadow: black;
+    box-shadow: 0 0 10px black;
     color: rgb(207, 207, 207);
     margin-right: 58px;
     margin-bottom: 70px;
     font-size: 20px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+/* efecto */
 .containerEachChamp:hover{
-    border: 1px solid #C6923C;
+    border: 1.5px solid rgb(236, 193, 124);
     cursor:pointer;
+    -webkit-box-shadow: inset 0px -50px 102px -38px rgba(4,12,23,1);
+    -moz-box-shadow: inset 0px -50px 102px -38px rgba(4,12,23,1);
+    box-shadow: inset 0px -50px 102px -38px rgba(4,12,23,1);
 }
-input[type="search"]:hover{
-    border:1px solid rgb(236, 193, 124);
-    cursor: pointer;
-}
+/* MODAL */
 .containerModal{ 
     display: none;
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    padding-top:50px; /* Location of the box */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
+    overflow: auto; /*Enable scroll if needed */
     background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+    opacity:100;
 }
 .modalEachChamp{
     color: rgb(207, 207, 207);
@@ -139,117 +159,356 @@ input[type="search"]:hover{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     width: 70%;
     background-color: rgb(17, 17, 17);
-    border: 1px solid #C6923C;
+    border: 1.5px solid #C6923C;
     display: flex;
     flex-direction: column;
+    font-size: 18px;
 }
 #containerModalPic{
-    height: 300px;
+    height: auto;
     width: 500px;
+    align-content: center;
+    margin:10px;
 }
 #modalPic{
     width:100%;
-    border-radius:8px ; 
+    border-radius:8px ;
 }
 .close {
     color: #aaaaaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
-    align-self: flex-end;
+    position: absolute;
+    padding: 10px;
+    border: 1.5px solid #C6923C;
+    border-radius: 50%;
 }
-#containerPhotoAndStats{
+#close{
+    display: flex;
+    justify-content: flex-end;
+}
+#containerPhotoAndText{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
-#containerStatsModal{
-    /* border: 1px solid #C6923C; */
-    border-radius: 8px;
-    padding: 10px;
+#textContainer{
     display: flex;
     flex-direction: column;
+    width: 350px;
+    justify-content: center;
+}
+#containerStatsModal{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     flex-wrap: wrap;
-    width: 500px;
+}
+#containerHealthAttack, #containerManaOther{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
 }
 #healthInfo, #manaInfo, #attackInfo, #otherInfo{
     border: 1px solid #C6923C;
     border-radius: 10px;
-    padding: 15px;
+    padding: 10px;
     margin: 10px;
-}
-#healthInfo,#manaInfo{
-    width:150px;
-}
-#attackInfo,#otherInfo{
-    width:190px; 
+    width: 190px;
 }
 #subcontainerStats{
     display: flex;
-    flex-direction: row; 
-    flex-wrap: wrap;
     justify-content: center;
 }
 .containerModalName{
     align-self:  center;
     font-size: 40px;
 }
-
-/* RESPONSIVE */
-/* Tablet */
-/* @media screen and (max-width:1023px) and (min-width:768px){
-
-}
-/* small tablet */
-/* @media screen and (max-width:767px) and (min-width:600px){
-
-} */ 
-/* mobile */
-@media screen and (max-width:599px) and (min-width:320px){
-    .background{
-      background-image:url(http://ava7.com/w/games/league-of-legends/league-of-legends-game-lol-shadow-isles-landscape-city.jpg);
-      background-position: center;
-      background-attachment: fixed; 
-    }
-    header {
-        position: fixed;
-        height: 50px;
-        /* width: 100%; */
-    }
-    .pag_name{
-        color: rgb(198,146,060);
-        font-size: 12.5px;
-    }
-    img[src="img/logo_lol.png"]{
-        cursor: pointer;
-        height: 50px;
-        width: 50px;
-    }
-    aside{
-        position: fixed;
-        width: 80px;
-        height: 100%;
-        padding: 5px;
-        line-height: 15px;
-        margin-top: 50px;
-        padding-left: 15px; 
-        background-color:rgb(004,012,023);
-        color:rgb(194, 194, 194);
-        font-size: 9px;
-        display: flex;
-        flex-direction: column;
-    } 
-    label[for=" "]{
-        margin-bottom: 5px;
-        color: rgb(198,146,060);
-    }
-
-}
-
 .infoBlurb{
     text-align: center;
 }
 .titleChamp{
-    font-size: 30px;
-    text-align: center;
+    font-size: 25px;
+    font-style: italic;
+}
+.close:hover{
+    border: 1.5px solid rgb(236, 193, 124);
+    color:white;
+}
+
+/* RESPONSIVE */
+/* Tablet */
+@media screen and (max-width:900px) and (min-width:768px){
+    header {
+        height: 70px;
+        position: fixed;
+    }
+    img[src="img/logo_lol.png"]{
+        width: 250px;
+    }
+    aside{
+        width: 120px;
+        padding: 5px;
+        line-height: 20px;
+        margin-top: 70px;
+        padding-left: 15px;  
+        font-size: 12px;
+    } 
+    label[for=" "]{
+        margin-bottom: 5px;
+        font-size: 15px;
+    }
+    label[for="tag"]{
+        font-size: 14px;
+    }
+    select,option, .btnClear{
+        font-size: 13px ;
+        width:120px;
+    }
+    .searcher{
+        padding-top: 100px;
+        margin-bottom: 30px;
+        font-size: 12px;
+        margin-left: 140px;
+    } 
+    input[type="search"]{
+        padding: 4px 9px 4px 102px;
+        font-size: 13px;
+        width: 300px;
+        height: 35px;
+        background: rgb(17, 17, 17) url("img/search-icon.png") no-repeat 10px center;
+    } 
+    #allTheChamps{
+        margin-left: 140px;
+    }
+    #containerProfilePic{
+        height: auto;
+        width: 173px;
+    }
+    .containerEachChamp{
+        line-height: 17px;
+        height: 262px;
+        width: 188px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 30px;
+        font-size: 15px;
+    }
+    .modalEachChamp{
+        font-size: 17px;
+    }
+    .titleChamp{
+        font-size: 22px;
+    }
+    .containerModalName{
+        font-size: 35px;
+    }
+    #healthInfo, #manaInfo, #attackInfo, #otherInfo{
+        padding: 15px;
+        margin: 10px;
+        width: 180px;
+    }
+}
+
+/* small tablet */
+@media screen and (max-width:767px) and (min-width:600px){
+    header {
+        height: 50px;
+        position: fixed;
+    }
+    img[src="img/logo_lol.png"]{
+        width: 200px;
+        margin-left: 100px;
+    }
+    aside{
+        width: 100px;
+        padding: 5px;
+        line-height: 15px;
+        margin-top: 50px;
+        padding-left: 15px; 
+        font-size: 9px;
+    } 
+    label[for=" "]{
+        margin-bottom: 5px;
+        font-size: 13px;
+    }
+    label[for="tag"]{
+        font-size: 10px;
+    }
+    select,option, .btnClear{
+        font-size: 12px ;
+        width: 95px;
+    }
+    #selectInformation{
+        font-size: 10px;
+    }
+    .searcher{
+        padding-top: 80px;
+        margin-bottom: 30px;
+        font-size: 10px;
+        margin-left: 100px;
+    } 
+    input[type="search"]{
+        padding: 4px 9px 4px 67.5px;
+        font-size: 12px;
+        width: 270px;
+        height: 35px;
+        background: rgb(17, 17, 17) url("img/search-icon.png") no-repeat 10px center;
+    } 
+    #allTheChamps{
+        margin-left: 120px;
+    }
+    #containerProfilePic{
+        height: auto;
+        width: 115px;
+    }
+    .containerEachChamp{
+        line-height: 10px;
+        height: 175px;
+        width: 125px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 30px;
+        font-size: 10px;
+    }
+    .modalEachChamp{
+        line-height: 15px;
+        font-size: 15px;
+    }
+    .titleChamp{
+        font-size: 22px;
+    }
+    .containerModalName{
+        font-size: 35px;
+    }
+    #healthInfo,#manaInfo,#attackInfo,#otherInfo{
+        padding: 15px;
+        width:140px; 
+    }
+    #containerModalPic{
+        width: 600px;
+    }
+} 
+/* mobile */
+@media screen and (max-width:599px) and (min-width:320px){
+    header {
+        height: 50px;
+        position: fixed;
+    }
+    img[src="img/logo_lol.png"]{
+        width: 150px;
+        margin-left: 0px;
+    }
+    label[for=" "]{
+        margin-bottom: 5px;
+    }
+    label[for=" "]{
+        margin-bottom: 5px;
+        font-size: 13px;
+    }
+    label[for="tag"]{
+        font-size: 11px;
+    }
+    select,option,.btnClear{
+        font-size: 12px ;
+        width:120px;
+    }
+    .searcher{
+        padding-top: 80px;
+        margin-bottom: 30px;
+        font-size: 10px;
+        margin-left: auto;
+        margin-right: 10px;
+    } 
+    input[type="search"]{
+        padding: 4px 9px 4px 67.5px;
+        font-size: 12px;
+        width: 260px;
+        height: 35px;
+        background: rgb(17, 17, 17) url("img/search-icon.png") no-repeat 10px center;
+    } 
+    #allTheChamps{
+        margin-left: auto;
+    }
+    #containerProfilePic{
+        height: auto;
+        width: 115px;
+    }
+    .containerEachChamp{
+        line-height: 10px;
+        height: 175px;
+        width: 125px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 30px;
+        font-size: 10px;
+    }
+    .modalEachChamp{
+        line-height: 15px;
+        font-size: 15px;
+        margin-bottom: 80px;
+    }
+    #containerPhotoAndText{
+        flex-direction: column;
+    }
+    .titleChamp{
+        font-size: 22px;
+    }
+    .containerModalName{
+        font-size: 35px;
+    }
+    #healthInfo,#manaInfo,#attackInfo,#otherInfo{
+        width:150px;
+    }
+    #containerHealthAttack,#containerManaOther{
+        display: flex;
+        justify-content: center;
+    }
+    #containerModalPic{
+        width: 220px;
+        margin: auto;
+    }
+    #textContainer{
+        width: 220px;
+        align-self: center;
+    }
+    .close {
+        font-size: 28px;
+        padding: 7px;
+        margin-left: 12px;
+        margin-top: -12px;
+    }
+    #close{
+        display: flex;
+        justify-content: flex-end;
+    }
+    /* Aside */
+    aside{
+        left: -150px;
+        transition: all 500ms linear;
+        margin-top: 60px;
+        font-size: 12px;
+        width:120px;
+        padding-left:15px;
+    }
+    aside .toggle{
+        position: fixed;
+        left: 20px;
+        cursor: pointer;
+        margin-top: -85px;
+    }
+    .toggle{
+        visibility: visible;
+        display: block;
+        width: 40px;
+        height: 36px;
+        text-align: center;
+        background-color: rgb(17, 17, 17, 0.8);
+        border: 1px solid #C6923C;
+        font-size: 30px;
+    }
+    aside.active{
+        left:0;
+    }  
 }
